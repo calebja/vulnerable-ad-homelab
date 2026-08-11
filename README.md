@@ -8,24 +8,24 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-lab%20only-orange)
 
-Infrastructure-as-code and documentation for a deliberately vulnerable
+Code and documentation for a deliberately vulnerable
 Active Directory environment, built for hands-on study of common AD
 misconfigurations, BloodHound attack-path mapping, and Kerberos/GPO
 abuse techniques.
 
-This repo captures the exact steps used to build the lab described in
+This repo captures the exact steps I used to build the lab described in
 [`docs/WRITEUP.md`](docs/WRITEUP.md): one domain controller, two
 workstations, and three intentionally introduced misconfigurations
 that each lead to Domain Admin.
 
-> **For isolated, offline lab use only.** Every script in this repo
-> disables security controls on purpose. Do not run any of this
-> against a production domain, a domain joined to a live network, or
+> **Intended for isolated, offline lab use only.** Every script in this repo
+> disables security controls on purpose. Please do NOT run any of this
+> against a domain joined to a live network, or
 > any system you do not own. See [`DISCLAIMER.md`](DISCLAIMER.md).
 
 ## Attack paths at a glance
 
-Three independent misconfigurations, three shortest paths to Domain Admins —
+Three independent misconfigurations, three shortest paths to Domain Admins
 mapped in BloodHound and confirmed by manual exploitation. Full diagrams in
 [`docs/assets/`](docs/assets/).
 
@@ -97,9 +97,6 @@ vulnerable-ad-homelab/
 - Kali Linux (current release)
 - [BloodHound](https://github.com/SpecterOps/BloodHound) + SharpHound collector
 - [Impacket](https://github.com/fortra/impacket) on the Kali host
-- [Rubeus](https://github.com/GhostPack/Rubeus) and [Mimikatz](https://github.com/gentilkiwi/mimikatz) — build or
-  download from their official repos; not redistributed here
+- [Rubeus](https://github.com/GhostPack/Rubeus) and [Mimikatz](https://github.com/gentilkiwi/mimikatz) - build or
+  download from their official repos
 - [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse) — same, official repo only
-
-This repo does not vendor any offensive tool binaries or source. Scripts here only
-call the tools listed above by their published, documented command-line flags.
