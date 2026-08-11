@@ -23,34 +23,6 @@ that each lead to Domain Admin.
 > against a domain joined to a live network, or
 > any system you do not own. See [`DISCLAIMER.md`](DISCLAIMER.md).
 
-## Attack paths at a glance
-
-Three independent misconfigurations, three shortest paths to Domain Admins
-mapped in BloodHound and confirmed by manual exploitation. Full diagrams in
-[`docs/assets/`](docs/assets/).
-
-<table>
-<tr>
-<td width="33%" align="center">
-<img src="docs/assets/attack-path-1-kerberoasting.png" alt="Kerberoasting attack path"><br/>
-<sub><b>1. Kerberoastable service account</b><br/>HasSPN → MemberOf → Domain Admins</sub>
-</td>
-<td width="33%" align="center">
-<img src="docs/assets/attack-path-2-unconstrained-delegation.png" alt="Unconstrained delegation attack path"><br/>
-<sub><b>2. Unconstrained delegation</b><br/>AdminTo → HasSession → captured TGT</sub>
-</td>
-<td width="33%" align="center">
-<img src="docs/assets/attack-path-3-gpo-abuse.png" alt="GPO abuse attack path"><br/>
-<sub><b>3. Weak GPO permissions</b><br/>GenericAll → GPLink → SYSTEM task</sub>
-</td>
-</tr>
-</table>
-
-<p align="center">
-<img src="docs/assets/attack-surface-overview.png" alt="Combined attack surface overview" width="700"><br/>
-<sub>All three shortest paths to Domain Admins, as surfaced by BloodHound's built-in query.</sub>
-</p>
-
 ## Repo layout
 
 ```
