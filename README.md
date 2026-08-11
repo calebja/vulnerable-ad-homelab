@@ -69,6 +69,6 @@ vulnerable-ad-homelab/
 - Kali Linux (current release)
 - [BloodHound](https://github.com/SpecterOps/BloodHound) + SharpHound collector
 - [Impacket](https://github.com/fortra/impacket) on the Kali host
-- [Rubeus](https://github.com/GhostPack/Rubeus) and [Mimikatz](https://github.com/gentilkiwi/mimikatz) - build or
+- [Rubeus](https://github.com/GhostPack/Rubeus) and [Mimikatz](https://github.com/gentilkiwi/mimikatz) | build or
   download from their official repos
-- [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse) - same, official repo only
+- [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse) | same, official repo only
