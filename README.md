@@ -71,4 +71,4 @@ vulnerable-ad-homelab/
 - [Impacket](https://github.com/fortra/impacket) on the Kali host
 - [Rubeus](https://github.com/GhostPack/Rubeus) and [Mimikatz](https://github.com/gentilkiwi/mimikatz) - build or
   download from their official repos
-- [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse) — same, official repo only
+- [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse) - same, official repo only
