@@ -12,8 +12,8 @@ a domain with all three misconfigurations in place.
 | WS02 | Windows 10 | 4 GB | 2 | 60 GB |
 | KALI01 | Kali Linux (current) | 4 GB | 2 | 40 GB |
 
-Create an **internal (host-only) network** in VirtualBox — no bridged
-adapter, no NAT to the internet — and attach all four VMs to it. Static IPs
+Create an **internal (host-only) network** in VirtualBox. No bridged
+adapter, no NAT to the internet, and attach all four VMs to it. Static IPs
 used throughout this repo:
 
 | Host | IP |
@@ -53,7 +53,7 @@ Add-Computer -DomainName lab.local -Credential (Get-Credential) -Restart
 
 ## 5. Take the baseline snapshot
 
-From the **host** (not inside any guest):
+From the **host**:
 
 ```powershell
 .\scripts\07-Snapshot-Checklist.ps1   # prints the checklist below
@@ -65,7 +65,7 @@ back together.
 
 ## 6. Introduce the three misconfigurations
 
-On DC01, one at a time — snapshot after each if you want to test the
+On DC01, one at a time. Snapshot after each if you want to test the
 paths independently:
 
 ```powershell
