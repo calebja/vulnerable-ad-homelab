@@ -1,8 +1,8 @@
-# Attack Paths — Exploitation Reference
+# Attack Paths - Exploitation Reference
 
-Commands used to manually validate each of the three BloodHound-identified
+These are the commands used to manually validate each of the three BloodHound-identified
 paths from KALI01. These invoke published, official releases of standard
-AD security tools — nothing here is custom exploit code. Get each tool
+AD security tools. Nothing here is custom exploit code. Please retrieve each tool
 from its official repo; none are vendored in this project.
 
 | Tool | Official source |
