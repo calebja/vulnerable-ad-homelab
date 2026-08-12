@@ -19,7 +19,7 @@ or `helpdesk-user04` (path 3), matching `scripts/03-New-LabUsersAndGroups.ps1`.
 
 ---
 
-## Path 1 — Kerberoasting `svc-sql`
+## Path 1 - Kerberoasting `svc-sql`
 
 **BloodHound edge:** `HasSPN` → `MemberOf` (Domain Admins)
 
@@ -45,7 +45,7 @@ or `helpdesk-user04` (path 3), matching `scripts/03-New-LabUsersAndGroups.ps1`.
 
 ---
 
-## Path 2 — Unconstrained Delegation on WS01
+## Path 2 - Unconstrained Delegation on WS01
 
 **BloodHound edges:** `AdminTo` → `HasSession` → captured TGT → `MemberOf`
 
@@ -56,7 +56,7 @@ or `helpdesk-user04` (path 3), matching `scripts/03-New-LabUsersAndGroups.ps1`.
    ```
 
 2. Trigger `Helpdesk-Admin` to authenticate to WS01 (in this lab, this is
-   simulated directly — log Helpdesk-Admin into WS01 — rather than via a
+   simulated directly. log Helpdesk-Admin into WS01 rather than via a
    coercion primitive, to keep the environment self-contained).
 
 3. Once Rubeus captures the TGT, reuse it (pass-the-ticket):
@@ -71,17 +71,9 @@ or `helpdesk-user04` (path 3), matching `scripts/03-New-LabUsersAndGroups.ps1`.
    klist
    dir \\dc01.lab.local\C$
    ```
-
-> **Note:** real-world engagements typically pair this with an
-> authentication-coercion primitive (e.g. against the print spooler or
-> EFS RPC interfaces) to force a privileged account to authenticate on
-> demand. That coercion tooling is out of scope for this lab and is not
-> included here — see the vendor advisories and public write-ups linked
-> from the Rubeus/Impacket repos if you want to study it separately.
-
 ---
 
-## Path 3 — GPO Abuse via `Helpdesk` Group
+## Path 3 - GPO Abuse via `Helpdesk` Group
 
 **BloodHound edges:** `MemberOf` → `GenericAll` (on GPO) → `GPLink` → SYSTEM task
 
@@ -109,7 +101,7 @@ or `helpdesk-user04` (path 3), matching `scripts/03-New-LabUsersAndGroups.ps1`.
 
 ---
 
-## Post-Exploitation — Full Domain Compromise
+## Post-Exploitation - Full Domain Compromise
 
 Once Domain Admin rights are held via any path above:
 
