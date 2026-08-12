@@ -48,7 +48,7 @@ vulnerable-ad-homelab/
     └── ATTACK-PATHS.md                   # documented exploitation commands per path
 ```
 
-## Quick start
+## Quick Start
 
 1. Stand up Windows Server 2019 + two Windows 10 VMs + Kali Linux in VirtualBox on an
    isolated, host-only network (see [`docs/BUILD-GUIDE.md`](docs/BUILD-GUIDE.md)).
