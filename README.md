@@ -43,7 +43,7 @@ vulnerable-ad-homelab/
 ├── bloodhound/
 │   └── Invoke-Collection.ps1             # wraps SharpHound.exe with the flags used in this lab
 └── docs/
-    ├── WRITEUP.md                        # link back to the full write-up
+    ├── AD_Home_Lab_Writeup.pdf           # link back to the full write-up
     ├── BUILD-GUIDE.md                    # step-by-step lab build instructions
     └── ATTACK-PATHS.md                   # documented exploitation commands per path
 ```
