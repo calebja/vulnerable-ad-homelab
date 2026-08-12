@@ -45,8 +45,7 @@ vulnerable-ad-homelab/
 └── docs/
     ├── WRITEUP.md                        # link back to the full write-up
     ├── BUILD-GUIDE.md                    # step-by-step lab build instructions
-    ├── ATTACK-PATHS.md                   # documented exploitation commands per path
-    └── assets/                           # BloodHound-style attack path diagrams (above)
+    └── ATTACK-PATHS.md                   # documented exploitation commands per path
 ```
 
 ## Quick start
