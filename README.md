@@ -27,7 +27,7 @@ that each lead to Domain Admin.
 
 ```
 vulnerable-ad-homelab/
-├── README.md
+├── AD_home_Lab_Writeup.pdf
 ├── DISCLAIMER.md
 ├── LICENSE
 ├── scripts/
